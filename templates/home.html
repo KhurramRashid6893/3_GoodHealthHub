@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="home">
+    <section class="hero">
+        <h2>Welcome to <span class="highlight">GoodHealthHub</span></h2>
+        <p>Your one-stop platform for health and well-being.</p>
+        <a href="{{ url_for('medicine') }}" class="cta-button">Explore Features</a>
+    </section>
+
+    <section class="features">
+        <h2>Our Key Features</h2>
+        <div class="feature-cards">
+            <div class="card">
+                <h3>Medicine Tracker</h3>
+                <p>Keep track of your medicine inventory and donate surplus to those in need.</p>
+                <a href="{{ url_for('medicine') }}" class="feature-link">Learn More</a>
+            </div>
+            <div class="card">
+                <h3>Health Camps</h3>
+                <p>Register for upcoming virtual and in-person health camps in your area.</p>
+                <a href="{{ url_for('health_camp') }}" class="feature-link">Join Now</a>
+            </div>
+            <div class="card">
+                <h3>Vaccination Tracker</h3>
+                <p>Track your vaccination history and stay updated with reminders.</p>
+                <a href="{{ url_for('vaccination') }}" class="feature-link">Track Vaccines</a>
+            </div>
+            <div class="card">
+                <h3>Doctor Consultation</h3>
+                <p>Book appointments or schedule online consultations with trusted doctors.</p>
+                <a href="{{ url_for('doctor_consultation') }}" class="feature-link">Consult a Doctor</a>
+            </div>
+            <div class="card">
+                <h3>Fitness Tracker</h3>
+                <p>Set fitness goals, track calories burned, and monitor your progress.</p>
+                <a href="{{ url_for('fitness_tracker') }}" class="feature-link">Start Tracking</a>
+            </div>
+            <div class="card">
+                <h3>Pharmacy Integration</h3>
+                <p>Find medicines available in nearby pharmacies with price details.</p>
+                <a href="{{ url_for('pharmacy') }}" class="feature-link">Explore Pharmacies</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="statistics">
+        <h2>Impact So Far</h2>
+        <div class="stats-grid">
+            <div class="stat">
+                <h3>5,000+</h3>
+                <p>Medicines Donated</p>
+            </div>
+            <div class="stat">
+                <h3>1,200+</h3>
+                <p>Health Camp Participants</p>
+            </div>
+            <div class="stat">
+                <h3>10,000+</h3>
+                <p>Vaccinations Tracked</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>About GoodHealthHub</h2>
+        <p>
+            GoodHealthHub is dedicated to creating a healthier world by connecting communities
+            to essential healthcare services. From tracking medicines to organizing vaccination
+            campaigns, we’re here to make healthcare more accessible for everyone.
+        </p>
+    </section>
+</div>
+{% endblock %}

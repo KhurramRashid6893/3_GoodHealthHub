@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="health-camp">
+    <h2>Register for Health Camps</h2>
+    <form method="POST">
+        <input type="text" name="camp_name" placeholder="Camp Name" required>
+        <input type="text" name="user_name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <button type="submit">Register</button>
+    </form>
+    <h3>Registered Participants</h3>
+    <ul>
+        {% for reg in registrations %}
+        <li>{{ reg[2] }} registered for {{ reg[1] }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+ 

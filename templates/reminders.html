@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Reminders and Alerts</h2>
+<form method="POST">
+    <input type="text" name="user_name" placeholder="Your Name" required>
+    <input type="text" name="reminder_type" placeholder="Reminder Type (e.g., Medication)" required>
+    <input type="datetime-local" name="date_time" required>
+    <button type="submit">Add Reminder</button>
+</form>
+<h3>Upcoming Reminders</h3>
+<ul>
+    {% for reminder in reminders %}
+    <li>{{ reminder[1] }} - {{ reminder[2] }} at {{ reminder[3] }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

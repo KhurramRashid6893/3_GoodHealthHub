@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="community">
+    <h2>Community Awareness and Engagement</h2>
+    <p>Welcome to the community section! Here, you can participate in discussions, share experiences, and stay informed about health and wellness.</p>
+    
+    <h3>Health Forums</h3>
+    <form method="POST" action="#">
+        <textarea name="forum_post" placeholder="Share your thoughts or questions..." rows="4" required></textarea>
+        <button type="submit">Post</button>
+    </form>
+    <h4>Recent Discussions</h4>
+    <ul>
+        <li>How to manage diabetes effectively? <span>- Posted by User123</span></li>
+        <li>Best practices for mental health during exams. <span>- Posted by Student_Health</span></li>
+        <li>Tips for maintaining a balanced diet. <span>- Posted by HealthGuru</span></li>
+    </ul>
+
+    <h3>Health Articles and Blogs</h3>
+    <ul>
+        <li><a href="#">10 Ways to Boost Your Immunity Naturally</a></li>
+        <li><a href="#">Understanding the Importance of Regular Exercise</a></li>
+        <li><a href="#">How Vaccinations Save Lives</a></li>
+    </ul>
+</div>
+{% endblock %}
+ 

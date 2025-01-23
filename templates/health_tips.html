@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Health Tips and Daily Blogs</h2>
+<form method="POST">
+    <input type="text" name="title" placeholder="Title" required>
+    <textarea name="content" placeholder="Content" required></textarea>
+    <button type="submit">Add Tip</button>
+</form>
+<h3>Latest Tips</h3>
+<ul>
+    {% for tip in tips %}
+    <li>
+        <h4>{{ tip[1] }}</h4>
+        <p>{{ tip[2] }}</p>
+        <small>Posted on: {{ tip[3] }}</small>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

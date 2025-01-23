@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="vaccination">
+    <h2>Vaccination Tracker</h2>
+    <form method="POST">
+        <input type="text" name="user_name" placeholder="Your Name" required>
+        <input type="text" name="vaccine_name" placeholder="Vaccine Name" required>
+        <input type="date" name="dose_date" required>
+        <button type="submit">Add Record</button>
+    </form>
+    <h3>Vaccination Records</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Vaccine</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for vac in vaccinations %}
+            <tr>
+                <td>{{ vac[1] }}</td>
+                <td>{{ vac[2] }}</td>
+                <td>{{ vac[3] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+ 

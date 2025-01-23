@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Fitness and Diet Tracker</h2>
+<form method="POST">
+    <input type="text" name="user_name" placeholder="Your Name" required>
+    <input type="text" name="fitness_goal" placeholder="Fitness Goal (e.g., Lose Weight)" required>
+    <input type="number" name="calories" placeholder="Calories Burned" required>
+    <textarea name="progress" placeholder="Describe Your Progress" required></textarea>
+    <button type="submit">Add Fitness Log</button>
+</form>
+<h3>Your Fitness Logs</h3>
+<ul>
+    {% for log in logs %}
+    <li>
+        {{ log[1] }} - Goal: {{ log[2] }}, Calories: {{ log[3] }}, Progress: {{ log[4] }}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

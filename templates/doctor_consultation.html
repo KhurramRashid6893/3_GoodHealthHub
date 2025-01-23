@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Doctor Consultation</h2>
+<form method="POST">
+    <input type="text" name="doctor_name" placeholder="Doctor's Name" required>
+    <input type="text" name="user_name" placeholder="Your Name" required>
+    <input type="date" name="appointment_date" required>
+    <input type="text" name="contact" placeholder="Contact Information" required>
+    <button type="submit">Book Appointment</button>
+</form>
+<h3>Upcoming Appointments</h3>
+<ul>
+    {% for appointment in appointments %}
+    <li>
+        {{ appointment[2] }} has an appointment with {{ appointment[1] }} on {{ appointment[3] }} (Contact: {{ appointment[4] }})
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

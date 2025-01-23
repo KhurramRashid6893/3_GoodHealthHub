@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Symptom Checker</h2>
+<form method="POST">
+    <input type="text" name="symptom" placeholder="Enter your symptom" required>
+    <button type="submit">Check</button>
+</form>
+{% if suggestions %}
+<h3>Suggestions</h3>
+<p>{{ suggestions }}</p>
+{% endif %}
+{% endblock %}
